@@ -1,280 +1,493 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
-    background-color: #f3f3f3;
-    font-family: Arial, sans-serif;
-  }
-  
-  #splash-screen {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: #f3f3f3; 
-        color: #3f3f3f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        z-index: 9999;
-    }
-  
-    .hidden {
-        display: none !important; 
-    }
-  
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 10;
-  }
-  
-  .logo {
-    float: left;
-  }
-  
-  .navigation {
-    float: right;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    margin-left: 15px;
-    color: #adadad;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover, .nav-link.active {
-    color: #3F3F3F; 
-  }
-  
-  section {
-    padding: 60px 20px;
-    height: 100vh; /* Force each section to be the height of the viewport */
-  }
-  
-  
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  #a {
-    margin-top: 10%;
-    margin-left: 5%;
-  }
-  
-  #paraA {
-    padding-top: 3%;
-    padding-right: 18%;
-    width: 100%,;
-    height: 100%;
-    color: #3F3F3F;
-    font-size: 30px;
-    font-family:'Times New Roman', Times, serif;
-    font-Weight: 100;
-    word-Wrap: break-word;
-  }
-  
-  #hello {
-    width: 100%,;
-    height: 100%;
-    color: #3F3F3F;
-    font-size: 69px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-Weight: 500;
-    word-Wrap: break-word;
-  }
-  
-  #buttonA{
-    padding-top: 5%;
-  }
-  
-  .button {
-          padding: 30px; 
-          background-color: #adadad; 
-          color: white; 
-          border: none; 
-          border-radius: 50px; 
-          cursor: pointer; 
-          font-size: 14px; 
-          transition: background-color 0.3s; 
-          display: flex; 
-          justify-content: center; 
-          align-items: center; 
-          width: 100px; 
-          height: 100px; 
-          text-align: center;
-      }
-      .button:hover {
-          background-color: #3F3F3F; 
-      }
-  
-      #buttonAA {
-        text-decoration: none;
-      }
-  
-      .scroll-prompt {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HyunbinOH's Personal Webpage</title>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+#splash-screen {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
-      text-align: center;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: opacity 0.5s; 
-      background-color: transparent; 
-      color: #000; 
+      width: 100%;
+      height: 100%;
+      background-color: #f3f3f3; 
+      color: #3f3f3f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      z-index: 9999;
+  }
+
+  .hidden {
+      display: none !important; 
+  }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.logo {
+  float: left;
+}
+
+.navigation {
+  float: right;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #adadad;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #3F3F3F; 
+}
+
+section {
+  padding: 60px 20px;
+  height: 100vh; /* Force each section to be the height of the viewport */
+}
+
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#a {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+#paraA {
+  padding-top: 3%;
+  padding-right: 18%;
+  width: 100%,;
+  height: 100%;
+  color: #3F3F3F;
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+  font-Weight: 100;
+  word-Wrap: break-word;
+}
+
+#hello {
+  width: 100%,;
+  height: 100%;
+  color: #3F3F3F;
+  font-size: 69px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-Weight: 500;
+  word-Wrap: break-word;
+}
+
+#buttonA{
+  padding-top: 5%;
+}
+
+.button {
+        padding: 30px; 
+        background-color: #adadad; 
+        color: white; 
+        border: none; 
+        border-radius: 50px; 
+        cursor: pointer; 
+        font-size: 14px; 
+        transition: background-color 0.3s; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100px; 
+        height: 100px; 
+        text-align: center;
     }
-  
-  .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #000; 
-    margin: 5px auto 0; 
-    display: inline-block; 
-  }
-  
-  
-  .work-content {
-    display: flex;
-    align-items: flex-start; 
-    gap: 20px; 
-  }
-  
-  
-  .work-text {
-    flex: 2; 
-    max-width: 100vw;
-  }
-  
-  .work-text h1 {
-    font-size: 50px
-  }
-  
-  .work-text h2 {
-    font-size: 40px
-  }
-  
-  .work-text p {
-    font-size: 20px;
-  }
-  
-  .Info-text {
-    width: 50%; 
-    float: left; 
-    
-  }
-  
-  .info-image {
-    width: 50%; 
-    height: auto; 
-    float: right; 
-  }
-  
-  
-  .Info-text h2 {
-    font-size: 100px;
-    padding-left: 20px;
-  }
-  
-  .Info-text h3 {
-    font-size: 60px;
-    padding-left: 100px;
-  }
-  
-  .Info-text p {
-    font-size: 20px;
-    padding-left: 20px;
-  }
-  
-  .Contact-text h2 {
-    font-size: 100px;
-  }
-  
-  #icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .timeline-separator {
-    border-top: 2px solid #000; 
-    width: 100%; 
-    margin-top: 40px;
-    margin-bottom: 40px; 
-  }
-  
-  
-  .work-images {
-    flex: 1;
-    width: 100%; 
-  }
-  
-  .image-slider {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 70vw;
-    overflow: hidden; 
-    height: 100vh; 
-  }
-  
-  .image-slider img {
-    width: 100%; 
-    height: 100vh; 
-    object-fit: cover; 
-  }
-  
-  section {
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  body {
-    overflow: hidden; 
-  }
-  
-  .social-button {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #adadad; 
-    background-size: cover;
+    .button:hover {
+        background-color: #3F3F3F; 
+    }
+
+    #buttonAA {
+      text-decoration: none;
+    }
+
+    .scroll-prompt {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s;
-    margin: 30px;
+    transition: opacity 0.5s; 
+    background-color: transparent; 
+    color: #000; 
   }
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #000; 
+  margin: 5px auto 0; 
+  display: inline-block; 
+}
+
+
+.work-content {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+
+.work-text {
+  flex: 2; 
+  max-width: 100vw;
+}
+
+.work-text h1 {
+  font-size: 50px
+}
+
+.work-text h2 {
+  font-size: 40px
+}
+
+.work-text p {
+  font-size: 20px;
+}
+
+.Info-text {
+  width: 50%; 
+  float: left; 
   
-  .social-button:hover {
-    transform: scale(1.1);
-  }
+}
+
+.info-image {
+  width: 50%; 
+  height: auto; 
+  float: right; 
+}
+
+
+.Info-text h2 {
+  font-size: 100px;
+  padding-left: 20px;
+}
+
+.Info-text h3 {
+  font-size: 60px;
+  padding-left: 100px;
+}
+
+.Info-text p {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.Contact-text h2 {
+  font-size: 100px;
+}
+
+#icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-separator {
+  border-top: 2px solid #000; 
+  width: 100%; 
+  margin-top: 40px;
+  margin-bottom: 40px; 
+}
+
+
+.work-images {
+  flex: 1;
+  width: 100%; 
+}
+
+.image-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 70vw;
+  overflow: hidden; 
+  height: 100vh; 
+}
+
+.image-slider img {
+  width: 100%; 
+  height: 100vh; 
+  object-fit: cover; 
+}
+
+section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden; 
+}
+
+.social-button {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #adadad; 
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 30px;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+#instagram-button {
+  background-image: url('src/ins.jpg');
+}
+
+#email-button {
+  background-image: url('src/gmail.jpg');
+}
+
+.footer-info {
+  background-color: #3f3f3f; 
+  color: white; 
+  text-align: center; 
+  padding: 20px; 
+  margin-top: 150px; 
+}
+
+.footer-info p {
+  margin: 10px 0; 
+}
+
+</style>
+</head>
+<body>
+  <div id="splash-screen">OHHYUNBIN</div>
+
+<header>
+  <div class="logo">©Code by Hyunbin OH</div>
+  <nav class="navigation">
+    <a href="#firstpage" class="nav-link">Home.</a>
+    <a href="#work" class="nav-link">Work.</a>
+    <a href="#info" class="nav-link">Info.</a>
+    <a href="#contact" class="nav-link">Contact.</a>
+  </nav>
+</header>
+
+<main>
+  <section id="firstpage">
+    <div id="a">
+      <p id="hello">Hello World!,</p>
+      <p id="paraA">
+        你好<br>
+        안녕하세요<br>
+        I’m Hyunbin OH, a college student still and a great designer in the future. Imagination is my strength, creative is my key, and design help me to make these happen in real life.
+      </p>
+      <div id="buttonA">
+        <a href="#contact" id="buttonAA">
+          <button class="button">Get in Touch</button>
+        </a>
+      </div>
+      <div id="scrollPrompt" class="scroll-prompt">
+        Scroll to discover
+        <div class="arrow-down"></div>
+    </div>
+    </div>
+    
+  </section>
+  <section id="work">
+      <div class="work-content">
+        <div class="work-images">
+          <div class="image-slider">
+            <img src="src/lookbook illustration.png" alt="Lookbook Illustration">
+            <img src="src/cup衍生3.png" alt="Cup Design">
+            <img src="src/body-set.png" alt="Body Set">
+            <img src="src/sakon.png" alt="Sakon">
+          </div>
+        </div>
+        <div class="work-text">
+          <h1>Brand Design</h1>
+          <h2>"unu"</h2>
+          <p>“unu”--Esperanto (one/一个/하나) 
+            <br>Zhejiang University International College Cultural and Creative Product.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="work-content">
+        <div class="work-images">
+          <div class="image-slider">
+            <img src="src/fabric1.png" alt="fabric1">
+            <img src="src/fabric2.png" alt="fabric2">
+            <img src="src/fabric3.png" alt="fabric3">
+          </div>
+        </div>
+        <div class="work-text">
+          <h1>Fabric Design</h1>
+          <h2>"Adobe"</h2>
+          <p>Using Adobe Substance Sampler/Painter/etc...</p>
+        </div>
+      </div>
+    </section>
+    
   
-  #instagram-button {
-    background-image: url('src/ins.jpg');
-  }
-  
-  #email-button {
-    background-image: url('src/gmail.jpg');
-  }
-  
-  .footer-info {
-    background-color: #3f3f3f; 
-    color: white; 
-    text-align: center; 
-    padding: 20px; 
-    margin-top: 150px; 
-  }
-  
-  .footer-info p {
-    margin: 10px 0; 
-  }
+  <section id="info">
+    <div class="Info-text">
+    <h2>Info</h2>
+    <p>A designer. Hyunbin OH / Wu Xuan Bin / Jacob.
+      Born in Seoul Korea, Raised in Beijing China, Studied BC(British Columbia) courses and Visual Art Design, 
+      Based in Hangzhou / Beijing / Seoul.</p>
+      <div class="timeline-separator"></div>
+    <h3>Timeline</h3>
+    <p>2015-2018: TEDA Mapleleaf International Highschool
+    </br>
+    2018-2019: Nanjing University
+    </br>
+    2019-2020: Zhejiang University
+    </br>
+    2020-2022: Military Service
+    </br>
+    2022-now: Zhejiang University(Undergraduate)
+  </p>
+  </div>
+  <img src="src/me.png" alt="Hyunbin OH" class="info-image">
+  </section>
+
+  <section id="contact">
+    <div class="Contact-text">
+    <h2>Contact</h2>
+    <div id="icon">
+      <a href="https://www.instagram.com/ooohyunbin/" target="_blank" class="social-button" id="instagram-button"></a>
+      <a href="mailto:ohbwxb@gmail.com" class="social-button" id="email-button"></a>
+    </div>
+      <div class="footer-info">
+          <p>for more information, please contact</p>
+          <p>Wechat: 1450957384</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(() => {
+        document.getElementById('splash-screen').classList.add('hidden');
+    }, 1500); 
+
+    // Scroll to Section
+    let isScrolling = false;
+    const sections = document.querySelectorAll('section');
+    let currentSectionIndex = 0;
+
+    const scrollToSection = (index) => {
+        if (isScrolling) return;
+        isScrolling = true;
+        window.scrollTo({
+            top: sections[index].offsetTop,
+            behavior: 'smooth'
+        });
+        setTimeout(() => {
+            isScrolling = false;
+        }, 1000);
+    };
+
+    window.addEventListener('wheel', (e) => {
+        if (isScrolling) return;
+        if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            scrollToSection(currentSectionIndex);
+        } else if (e.deltaY < 0 && currentSectionIndex > 0) {
+            currentSectionIndex--;
+            scrollToSection(currentSectionIndex);
+        }
+    });
+
+    const updateNavLinks = () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const navLinks = document.querySelectorAll('.navigation .nav-link');
+        sections.forEach(section => {
+            if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (section.getAttribute('id') === link.getAttribute('href').substring(1)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    };
+
+    window.addEventListener('scroll', updateNavLinks);
+    updateNavLinks();
+
+    // Image Slider
+    const slider = document.querySelector('.image-slider');
+    let index = 0;
+    setInterval(() => {
+        index = (index + 1) % slider.children.length;
+        const newScrollLeft = index * slider.clientWidth;
+        slider.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
+    }, 2000);
+
+    const secondSlider = document.querySelectorAll('.image-slider')[1];
+    let secondIndex = 0;
+    setInterval(() => {
+        secondIndex = (secondIndex + 1) % secondSlider.children.length;
+        const newScrollLeft = secondIndex * secondSlider.clientWidth;
+        secondSlider.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
+    }, 1500);
+
+    const scrollPrompt = document.querySelector('.scroll-prompt');
+    const lastSection = document.querySelector('section:last-of-type');
+
+    const updateScrollPrompt = () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        if (scrollPosition + window.innerHeight >= lastSection.offsetTop) {
+            let opacity = 1 - (scrollPosition + window.innerHeight - lastSection.offsetTop) / window.innerHeight;
+            opacity = Math.max(opacity, 0);
+            scrollPrompt.style.opacity = opacity;
+        } else {
+            scrollPrompt.style.opacity = 1;
+        }
+    };
+
+    window.addEventListener('scroll', updateScrollPrompt);
+    updateScrollPrompt();
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>
