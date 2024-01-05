@@ -154,15 +154,18 @@ h2 {
 
 .work-content {
   display: flex;
-  align-items: flex-start; 
-  gap: 20px; 
+  flex-wrap: wrap; /* 允许内容换行，以适应不同屏幕大小 */
+  align-items: flex-start;
+  gap: 20px; /* 为元素之间设置间隔 */
 }
+
 
 
 .work-text {
-  flex: 2; 
-  max-width: 100vw;
+  flex: 1 1 300px; /* 让它能够灵活地伸缩和收缩，基础宽度设置为300px */
+  padding-left: 0; /* 确保文本不会因为内边距而偏移 */
 }
+
 
 .work-text h1 {
   font-size: 50px
@@ -223,23 +226,55 @@ h2 {
 
 
 .work-images {
-  flex: 1;
-  width: 100%; 
+  flex: 1 1 300px; /* 使图片区域灵活伸缩 */
+  width: 100%; /* 设置为父元素的100%宽度 */
+  max-height: 100vh; /* 限制最大高度 */
+  overflow: hidden; /* 隐藏超出部分 */
 }
 
 .image-slider {
   display: flex;
-  flex-wrap: nowrap;
-  width: 70vw;
-  overflow: hidden; 
-  height: 100vh; 
+  flex-wrap: nowrap; /* 图片水平排列 */
+  overflow-x: auto; /* 允许水平滚动 */
+  scroll-snap-type: x mandatory; /* 滚动对齐 */
 }
 
+
+
 .image-slider img {
-  width: 100%; 
-  height: 100vh; 
-  object-fit: cover; 
+  max-width: 100vw; /* 限制图片的最大宽度不超过其父元素 */
+  max-height: 100vh;
+  height: auto; /* 保持图片的纵横比 */
+  scroll-snap-align: start; /* 与scroll-snap-type结合使用，以确保图片在滚动时对齐 */
 }
+
+@media (min-width: 768px) { /* 适用于较宽屏幕的样式 */
+  .image-slider {
+    max-width: 60vw; /* 最大宽度为视口宽度的80%，即4:5的比例 */
+    margin-left: left; /* 居中对齐 */
+    margin-right: auto; /* 居中对齐 */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-content {
+    flex-direction: column; /* 在小屏幕上使内容垂直排列 */
+  }
+  .work-images, .work-text {
+    flex: none; /* 禁止伸缩，占据全部可用空间 */
+    width: 100%;
+  }
+
+
+  }
+
+
+@media (orientation: landscape) {
+  .image-slider img {
+    max-height: 80vh; /* 在横屏时进一步限制图片高度 */
+  }
+}
+
 
 section {
   height: 100vh;
@@ -363,12 +398,11 @@ body {
     <div class="Info-text">
     <h2>Info</h2>
     <p>A designer. Hyunbin OH / Wu Xuan Bin / Jacob.
-      Born in Seoul Korea, Raised in Beijing China, Studied BC(British Columbia) courses and Visual Art Design, 
+      Born in Seoul Korea, Raised in Beijing China, Studied Visual Art Design, 
       Based in Hangzhou / Beijing / Seoul.</p>
       <div class="timeline-separator"></div>
     <h3>Timeline</h3>
-    <p>2015-2018: TEDA Mapleleaf International Highschool
-    </br>
+    <p>
     2018-2019: Nanjing University
     </br>
     2019-2020: Zhejiang University
@@ -449,6 +483,7 @@ body {
     updateNavLinks();
 
     // Image Slider
+    
     const slider = document.querySelector('.image-slider');
     let index = 0;
     setInterval(() => {
@@ -482,6 +517,11 @@ body {
     window.addEventListener('scroll', updateScrollPrompt);
     updateScrollPrompt();
 });
+
+
+
+
+
 </script>
 
 </body>
